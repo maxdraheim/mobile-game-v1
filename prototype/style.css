@@ -1,0 +1,130 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #0b0c10;
+  color: #e6f0ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1b2330 0%, #0b0c10 60%);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hud {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hud h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.hud__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8ea4ff;
+}
+
+.game {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0f1420;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, #151c2b 0%, #0f1420 100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(8, 10, 14, 0.74);
+  backdrop-filter: blur(6px);
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.panel {
+  text-align: center;
+  background: rgba(20, 27, 40, 0.95);
+  border-radius: 18px;
+  padding: 24px;
+  width: min(420px, 90%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+}
+
+.panel button {
+  margin-top: 16px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #5d7bff, #8e6bff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.notes {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.notes ul {
+  margin: 8px 0 0 18px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 16px 32px;
+  }
+
+  .hud h1 {
+    font-size: 20px;
+  }
+}
