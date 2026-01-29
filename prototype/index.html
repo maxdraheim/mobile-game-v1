@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Runner Upgrade Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hud">
+        <div class="hud__left">
+          <h1>Runner Upgrade Prototype</h1>
+          <p>Drag or use arrows to dodge. Collect upgrades to grow stronger.</p>
+        </div>
+        <div class="hud__stats">
+          <div class="stat">
+            <span class="label">Strength</span>
+            <span id="strength">1.0</span>
+          </div>
+          <div class="stat">
+            <span class="label">Coins</span>
+            <span id="coins">0</span>
+          </div>
+          <div class="stat">
+            <span class="label">Distance</span>
+            <span id="distance">0m</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="game">
+        <canvas id="game" width="900" height="520" aria-label="Runner game area"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="panel">
+            <h2 id="overlay-title">Ready?</h2>
+            <p id="overlay-body">
+              Press <strong>Start</strong> and collect power-ups to grow larger. Avoid obstacles.
+            </p>
+            <button id="start-button">Start Run</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="notes">
+        <h2>Prototype Notes</h2>
+        <ul>
+          <li>Upgrades increase size + speed multiplier.</li>
+          <li>Obstacles reduce strength; hit 0 to fail.</li>
+          <li>Finish line converts strength into coins.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
